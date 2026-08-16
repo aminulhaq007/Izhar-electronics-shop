@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Izhar Electronics | Owner Gallery Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+<header class="admin-header"><div class="container admin-nav"><a href="index.html" class="admin-brand"><img src="assets/logo-mark.png" alt="Izhar Electronics logo"><span>Izhar Electronics<small>Owner Gallery Manager</small></span></a><a href="index.html" class="admin-back">← Website</a></div></header>
+<main class="admin-main"><div class="container admin-shell">
+  <section id="loginPanel" class="admin-panel auth-panel">
+    <div class="eyebrow">OWNER ONLY</div><h1>Gallery Manager</h1><p>Sign in with the authorized Firebase admin account. Visitors cannot upload or remove anything.</p>
+    <form id="loginForm"><label>Email<input id="email" type="email" autocomplete="username" required placeholder="Owner email"></label><label>Password<input id="password" type="password" autocomplete="current-password" required placeholder="Password"></label><button class="btn primary" type="submit">Sign In Securely</button></form><div id="loginMessage" class="admin-message"></div>
+  </section>
+  <section id="dashboard" class="hidden">
+    <div class="admin-top"><div><div class="eyebrow">OWNER DASHBOARD</div><h1>Manage Projects Gallery</h1><p>Upload photos or videos from your phone/computer. New items appear on the public website automatically.</p></div><button id="logoutBtn" class="btn dark">Sign Out</button></div>
+    <div class="admin-panel upload-panel"><div class="upload-box"><div class="upload-icon">↑</div><h2>Add project photos or videos</h2><p>Choose one or more images/videos from your phone or computer.</p><label class="upload-btn">Choose Files<input id="fileInput" type="file" accept="image/*,video/*" multiple hidden></label><div id="uploadProgress" class="progress-wrap hidden"><div class="progress"><span id="progressBar"></span></div><small id="progressText">Uploading…</small></div></div></div>
+    <div class="admin-panel"><div class="admin-list-head"><div><h2>Your uploaded projects</h2><p>Only the authorized admin can delete items.</p></div><span id="countBadge" class="count-badge">0 items</span></div><div id="adminGallery" class="admin-gallery"></div><div id="adminEmpty" class="admin-empty">No uploaded projects yet.</div></div>
+  </section>
+</div></main>
+<div id="warningModal" class="modal hidden"><div class="modal-card"><div class="warning-icon">!</div><h2>Delete this project?</h2><p>This will permanently remove the selected photo/video from the gallery and cloud storage.</p><div class="modal-actions"><button id="cancelDelete" class="btn light-dark">Cancel</button><button id="confirmDelete" class="btn danger">Yes, Delete</button></div></div></div>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
