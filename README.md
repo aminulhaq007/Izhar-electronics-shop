@@ -108,3 +108,4 @@ The WhatsApp links open WhatsApp in a new tab/window and the email buttons open 
 - Increased header logo size and preserved responsive sizing.
 - Added hover feedback across navigation, buttons, service cards, project cards, gallery cards, process cards and contact actions.
 - Kept the original logo colors and used high-contrast white header background.
+# Izhar-electronics-shop
